@@ -1,149 +1,808 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Tailwind -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Font Awesome -->
+    <title>Maj Gen Md. Anwarul Islam | Strategic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/218d7c0b86.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./tailwindCSS.css">
 
-    <title>Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@700;900&display=swap');
+
+        :root {
+            --navy: #355872;
+            --accent: #0aa1b2;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* High-Impact Navy Hero Background */
+        .hero-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #355872 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.3;
+        }
+
+        .glass-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .accent-gradient-text {
+            background: linear-gradient(90deg, #0aa1b2, #00d2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 30px -5px rgba(53, 88, 114, 0.1);
+        }
+    </style>
 </head>
-<body class="bg-[#86cde93d]">
-    <!-- Navbar -->
-    <nav class="bg-[#355872] text-white p-4 shadow-lg fixed w-full">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="font-bold text-lg">Md Anwarul Islam</h1>
-            <div class="space-x-4 flex gap-10">
-                <a href="#about" class="hover:text-gray-300">About</a>
-                <a href="#experience" class="hover:text-gray-300">Experience</a>
-                <a href="#contact" class="hover:text-gray-300">Contact</a>
+
+<body class="text-slate-900">
+
+    <nav class="fixed w-full z-50 bg-white border-b border-slate-100 shadow-sm">
+        <div class="container mx-auto px-6 py-0 flex justify-between items-center h-24">
+            <div class="flex items-center gap-4 md:gap-6">
+                <div class="hidden md:block w-px h-12 bg-slate-200"></div>
+                <div class="flex flex-col">
+                    <h1 class="font-poppins font-black text-lg md:text-2xl text-[#1e293b] leading-none tracking-tight">
+                        MAJ GEN MD. <span class="text-[#355872]">ANWARUL ISLAM</span>
+                    </h1>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="h-1.5 w-1.5 rounded-full bg-[#0aa1b2]"></span>
+                        <span
+                            class="text-[8px] md:text-[10px] font-extrabold text-[#0aa1b2] tracking-[0.3em] md:tracking-[0.4em] uppercase">Strategic
+                            Leadership</span>
+                    </div>
+                </div>
             </div>
-            <div class="">
-                <button class="bg-[#0aa1b2] text-white px-5 py-3 rounded-xl cursor-pointer hover:bg-[#7AAACE] hover:text-black">Contact Me</button>
+
+            <div class="hidden lg:flex items-center gap-10">
+                <div class="flex space-x-8 font-bold text-[11px] uppercase tracking-[0.15em] text-slate-500">
+                    <a href="#about" class="hover:text-[#355872] transition-colors relative group">Profile <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#0aa1b2] transition-all group-hover:w-full"></span></a>
+                    <a href="#competencies" class="hover:text-[#355872] transition-colors relative group">Competencies
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#0aa1b2] transition-all group-hover:w-full"></span></a>
+                    <a href="#experience" class="hover:text-[#355872] transition-colors relative group">Career <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#0aa1b2] transition-all group-hover:w-full"></span></a>
+                    <a href="#impact" class="hover:text-[#355872] transition-colors relative group">Impact <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#0aa1b2] transition-all group-hover:w-full"></span></a>
+                    <a href="#education" class="hover:text-[#355872] transition-colors relative group">Education &
+                        Qualification<span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#0aa1b2] transition-all group-hover:w-full"></span></a>
+                </div>
+                <a href="mailto:anwar333965@gmail.com"
+                    class="bg-[#355872] text-white text-[11px] font-bold uppercase tracking-widest px-8 py-3 rounded-sm hover:bg-[#0aa1b2] transition-all shadow-md">
+                    Contact
+                </a>
+            </div>
+
+            <button onclick="toggleMenu()" class="lg:hidden text-[#355872] text-2xl p-2 focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-xl">
+            <div class="flex flex-col p-6 space-y-4 font-bold text-[12px] uppercase tracking-widest text-slate-600">
+                <a href="#about" onclick="toggleMenu()"
+                    class="hover:text-[#0aa1b2] py-2 border-b border-slate-50">Profile</a>
+                <a href="#competencies" onclick="toggleMenu()"
+                    class="hover:text-[#0aa1b2] py-2 border-b border-slate-50">Competencies</a>
+                <a href="#experience" onclick="toggleMenu()"
+                    class="hover:text-[#0aa1b2] py-2 border-b border-slate-50">Career</a>
+                <a href="#impact" onclick="toggleMenu()"
+                    class="hover:text-[#0aa1b2] py-2 border-b border-slate-50">Impact</a>
+                <a href="#education" onclick="toggleMenu()"
+                    class="hover:text-[#0aa1b2] py-2 border-b border-slate-50">Education & Qualification</a>
+                <a href="mailto:anwar333965@gmail.com" class="bg-[#0aa1b2] text-white text-center py-4 rounded-sm mt-4">
+                    Send Email
+                </a>
             </div>
         </div>
     </nav>
-    
-    <!-- Hero Section -->
-    <section class="w-[80%] mx-auto">
-        <div class="pt-32 pb-20 text-center flex flex-col md:flex-row justify-between items-center gap-5">
-            <div class="text-left">
-                <h1 class="text-5xl font-bold mb-5">Hi, I’m <span class="text-[#355872]">Major General Md <br> Anwarul Islam
-                        <br></span>
-                    SUP, ndu, psc (Retd.)</h1>
-                <p>Major General Md Anwarul Islam (Retd.) is a distinguished former senior officer of the Bangladesh Army with 32
-                    years of
-                    honorable service from 1987 to 2020.
-            
-                    Throughout his military career, he held key command and strategic appointments at formation and Army
-                    Headquarters
-                    levels, contributing to operational planning, defense administration, and leadership development.
-            
-                    Currently serving as Registrar of Southeast University, he continues to shape future generations through
-                    academic
-                    governance and institutional leadership.</p>
-                <div class="flex gap-5 mt-5">
-                    <button
-                        class="bg-[#0aa1b2] text-white px-5 py-3 rounded-xl cursor-pointer hover:bg-[#7AAACE] hover:text-black">View
-                        Profile</button>
-                    <button
-                        class="bg-[#0aa1b2] text-white px-5 py-3 rounded-xl cursor-pointer hover:bg-[#7AAACE] hover:text-black">Contact</button>
+
+    <section id="about" class="hero-bg pt-48 pb-32">
+        <div class="hero-pattern absolute inset-0"></div>
+        <div class="container mx-auto px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-3/5 space-y-8">
+                    <div
+                        class="inline-block px-4 py-1 rounded bg-white/10 border border-white/20 text-[10px] font-bold tracking-widest uppercase text-cyan-300">
+                        32 Years of Active Service
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-black text-white leading-tight font-poppins">
+                        Maj Gen Md. <br> <span class="accent-gradient-text">Anwarul Islam</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+                        Strategic leader with 32 years of Army service, experienced in national security, multinational
+                        command, and high-value
+                        project management. Decorated for excellence and committed to developing future leaders and
+                        strengthening institutions.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-4">
+                        <div class="glass-container p-6 rounded-2xl">
+                            <p class="text-3xl font-black text-[#0aa1b2]">2,000+</p>
+                            <p class="text-[9px] font-bold uppercase text-slate-400">Officers Selected</p>
+                        </div>
+                        <div class="glass-container p-6 rounded-2xl">
+                            <p class="text-3xl font-black text-[#0aa1b2]">$470M</p>
+                            <p class="text-[9px] font-bold uppercase text-slate-400">Project Management</p>
+                        </div>
+                        <div class="glass-container p-6 rounded-2xl hidden sm:block">
+                            <p class="text-3xl font-black text-[#0aa1b2]">21k</p>
+                            <p class="text-[9px] font-bold uppercase text-slate-400">Members Trained</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-2/5 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-[#0aa1b2] rounded-full blur-2xl opacity-20"></div>
+                        <div
+                            class="relative w-72 h-72 lg:w-96 lg:h-96 rounded-full border-8 border-white/10 overflow-hidden shadow-2xl bg-slate-800">
+                            <img src="./image/download-removebg-preview (1).png" class="w-full h-full object-cover"
+                                alt="Maj Gen Anwar">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="w-full">
-                <img src="./image/download-removebg-preview (1).png" alt="">
-            </div>
         </div>
-        <div class="">
-            <h1 class="pl-1 text-2xl mb-2">Find With Me</h1>
-            <div class="flex gap-3 text-4xl">
-                <div class=""><i class="fa-brands fa-linkedin"></i></div>
-                <div class=""><i class="fa-brands fa-facebook"></i></div>
-                <div class=""><i class="fa-brands fa-square-twitter"></i></div>
+    </section>
+
+    <section id="competencies" class="py-24 bg-white">
+        <div class="container mx-auto px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-[#355872] uppercase tracking-tighter">Core Competencies
+                </h2>
+                <div class="w-20 h-1 bg-[#0aa1b2] mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#355872] transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[#0aa1b2] transition-colors">
+                        <i class="fas fa-chess-knight text-2xl text-[#355872] group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#355872] group-hover:text-white mb-3 transition-colors">Strategy
+                        & Planning</h3>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300 leading-relaxed transition-colors">
+                        Expertise in strategy formulation, budgeting, and forecasting. Specialized in
+                        change-making through innovative thinking.
+                    </p>
+                </div>
+                <div
+                    class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#355872] transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[#0aa1b2] transition-colors">
+                        <i class="fas fa-truck-moving text-2xl text-[#355872] group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#355872] group-hover:text-white mb-3 transition-colors">Supply
+                        Chain</h3>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300 leading-relaxed transition-colors">
+                        Vast experience in global procurement, sourcing, and vendor management.
+                    </p>
+                </div>
+                <div
+                    class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#355872] transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[#0aa1b2] transition-colors">
+                        <i class="fas fa-users-viewfinder text-2xl text-[#355872] group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#355872] group-hover:text-white mb-3 transition-colors">Talent
+                        Selection</h3>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300 leading-relaxed transition-colors">
+                        Renowned as the "Selector of Leaders". Expert in career planning for 1,300+
+                        officers.
+                    </p>
+                </div>
+                <div
+                    class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#355872] transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[#0aa1b2] transition-colors">
+                        <i class="fas fa-gears text-2xl text-[#355872] group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#355872] group-hover:text-white mb-3 transition-colors">
+                        Operations Management</h3>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300 leading-relaxed transition-colors">
+                        Capable of leading institutions independently in rapidly changing environments.
+                    </p>
+                </div>
+                <div
+                    class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#355872] transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[#0aa1b2] transition-colors">
+                        <i class="fas fa-microphone-lines text-2xl text-[#355872] group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#355872] group-hover:text-white mb-3 transition-colors">Media &
+                        PR</h3>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300 leading-relaxed transition-colors">
+                        Eloquence in public speaking and motivation techniques. Participation in multiple
+                        talk shows.
+                    </p>
+                </div>
+                <div
+                    class="group p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-[#355872] transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[#0aa1b2] transition-colors">
+                        <i class="fas fa-handshake text-2xl text-[#355872] group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#355872] group-hover:text-white mb-3 transition-colors">
+                        Stakeholder Management</h3>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300 leading-relaxed transition-colors">
+                        Coordinating across government ministries and embassies. Team-building in
+                        multinational environments.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 container mx-auto px-6">
-        <h1 class="text-5xl font-bold mb-10 text-center">Core Competencies</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="rounded-2xl bg-[#a7cee93d] p-4 ">
-                <div class="flex justify-center">
-                    <img class="rounded-full w-25" src="./image/strategic-leadership1.jpg" alt="">
+    <section id="experience" class="py-32 bg-slate-50">
+        <div class="container mx-auto px-8">
+            <h2
+                class="text-3xl font-black text-[#355872] mb-16 uppercase tracking-tighter border-l-8 border-[#355872] pl-6">
+                Career Summary</h2>
+            <div class="space-y-6">
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#0aa1b2] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Professor (Adjunct) at MIST</h3>
+                        <span class="text-xs font-black text-[#0aa1b2] uppercase tracking-widest">Jan 2023 — Present
+                        </span>
+                    </div>
+                    <p class="text-sm text-slate-600">Conducting undergraduate and postgraduate courses and serving as a
+                        member of the AHQ Think Tank Group.</p>
                 </div>
-                <h1 class="text-2xl text-center font-bold mt-4">Strategic Leadership</h1>
-                <p class="text-justify mt-4">Extensive experience in high-level strategic planning, operational command, and institutional leadership within the
-                Bangladesh Army.</p>
-            </div>
 
-            <div class="rounded-2xl bg-[#a7cee93d] p-4 ">
-                <div class="flex justify-center">
-                    <img class="rounded-full w-25" src="./image/strategic-leadership1.jpg" alt="">
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#355872] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Member, Think Tank Group, Army Headquarters,
+                            Bangladesh Army</h3>
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">November 2021 – 31 Jan
+                            2023</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Research and advice on any assignment entrusted by Army
+                        Headquarters.</p>
                 </div>
-                <h1 class="text-2xl text-center font-bold mt-4">Officer Selection & Leadership Development</h1>
-                <p class="text-justify mt-4">Former President of Inter Services Selection Board, assessing over 20,000 candidates and
-                    selecting more than 2,000
-                    future officers of the Armed Forces.</p>
-            
-            </div>
 
-            <div class="rounded-2xl bg-[#a7cee93d] p-4 ">
-                <div class="flex justify-center">
-                    <img class="rounded-full w-25" src="./image/strategic-leadership1.jpg" alt="">
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#0aa1b2] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Director, Trust Security, Army Welfare Trust,
+                            Bangladesh Army</h3>
+                        <span class="text-xs font-black text-[#0aa1b2] uppercase tracking-widest">November 2020 –
+                            October 2021 </span>
+                    </div>
+                    <p class="text-sm text-slate-600">Enhanced retained earnings by Tk.10,00000/- per month by providing
+                        security services to 25 entities to include security
+                        of entire `Trust Bank Limited` and its paraphernalia across the country. Introduced formal
+                        training of security
+                        personnel.</p>
                 </div>
-                <h1 class="text-2xl text-center font-bold mt-4">Defense Administration & Policy Coordination</h1>
-                <p class="text-justify mt-4">Served in key appointments at Army Headquarters, collaborating with ministries and
-                    diplomatic missions in national-level
-                    coordination.</p>
-            </div>
 
-            <div class="rounded-2xl bg-[#a7cee93d] p-4 ">
-                <div class="flex justify-center">
-                    <img class="rounded-full w-25" src="./image/strategic-leadership1.jpg" alt="">
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#355872] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Senior Directing Staff (Army)/ National Defense
+                            College, Mirpur</h3>
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Jun 2020 – Jun
+                            2020</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Posted for promotion and retirement purpose only.</p>
                 </div>
-                <h1 class="text-2xl text-center font-bold mt-4">Academic Governance & Institutional Management</h1>
-                <p class="text-justify mt-4">Currently Registrar of Southeast University, overseeing academic administration, regulatory
-                    compliance, and
-                    institutional development.</p>
-            
-            </div>
 
-            <div class="rounded-2xl bg-[#a7cee93d] p-4 ">
-                <div class="flex justify-center">
-                    <img class="rounded-full w-25" src="./image/strategic-leadership1.jpg" alt="">
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#0aa1b2] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Director Artillery, Army Headquarters</h3>
+                        <span class="text-xs font-black text-[#0aa1b2] uppercase tracking-widest">Jun 2019 – Jun 2020
+                        </span>
+                    </div>
+                    <p class="text-sm text-slate-600">As a Director at Army Headquarters, preparation of technical
+                        specification, standardization, planning, forecasting,
+                        budgeting and procurement of military hardware worth Tk. 2500 crore from home and abroad.
+                        Planning, preparation and
+                        execution of training plan for approximately 21000 members of Army at home and abroad including
+                        selection of members for
+                        training abroad, policy formulation, planning and organizing numerous army level ceremonial
+                        programmes etc.</p>
                 </div>
-                <h1 class="text-2xl text-center font-bold mt-4">Human Resource & Organizational Management</h1>
-                <p class="text-justify mt-4">Strong background in personnel management, leadership mentoring, and performance evaluation
-                    across military and academic
-                    sectors.</p>
-            
-            </div>
 
-            <div class="rounded-2xl bg-[#a7cee93d] p-4 ">
-                <div class="flex justify-center">
-                    <img class="rounded-full w-25" src="./image/strategic-leadership1.jpg" alt="">
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#355872] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Brigade Commander</h3>
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">September 2018 – Jun
+                            2019</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Responsible for administration, career management, training,
+                        security and welfare of all under command forces.
+                        Conducting
+                        `India-Bangladesh Joint Cycling Expedition` from border to border. Participation in Pacific Area
+                        Senior Officers`
+                        Logistic Seminar in Tokyo, Japan.</p>
                 </div>
-                <h1 class="text-2xl text-center font-bold mt-4">Corporate Governance & Strategic Advisory</h1>
-                <p class="text-justify mt-4">Former Director of FAS Finance & Investment, contributing to governance, planning, and
-                    administrative oversight.</p>
-            
-            </div>
 
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#0aa1b2] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">President, Inter Services Selection Board i.e. ISSB
+                        </h3>
+                        <span class="text-xs font-black text-[#0aa1b2] uppercase tracking-widest">October 2015 –
+                            September 2018 </span>
+                    </div>
+                    <p class="text-sm text-slate-600">Administer all selectors and associated staffs, train including
+                        first time training of the psychologists at home and
+                        abroad and recommend potential selectors, planning, scheduling and selection of cadets for Armed
+                        Forces and cadet
+                        colleges, budgeting and forecasting annual expenditure, plan and implement infrastructure
+                        development works, research,
+                        development and modernize the three dimensional selection system, digitization of the selection
+                        system, preparation of
+                        the selection guide in the form of YouTube video. Visiting and gaining insight about selection
+                        procedures of Royal
+                        British Army, Royal Thai Army and Sri Lankan Army.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#355872] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Brigade Commander</h3>
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">September 2013 –
+                            August 2015</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Worked as Commander of one of the four regions of Chittagong Hill
+                        Tracts having around 6500 Army, BGB, Ansar, VDP and
+                        Police personnel for implementation of the peace agreement by working with all stakeholders
+                        including the civil
+                        administration in a complex geo-politico-economic dynamic and volatile environment with
+                        diversified population and
+                        culture. Responsible for administration, training, security and career management of all under
+                        command forces and
+                        overall security, peace, unity and development of the region. Undergoing Senior Mission
+                        Leadership Training in Tokyo,
+                        Japan and then attending course at National Defense University of China.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#0aa1b2] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Station Commander, Ghatail/ Jamuna</h3>
+                        <span class="text-xs font-black text-[#0aa1b2] uppercase tracking-widest">May 2012 – October
+                            2014 </span>
+                    </div>
+                    <p class="text-sm text-slate-600">Administration and Quartering of all members, management of land
+                        and infrastructure, health, hygiene and sanitation,
+                        ration and medical services, supervision of markets, school, security of the garrisons,
+                        preparation of master plan for
+                        Jamuna Cantonment.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#355872] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Senior Operations Officers/BANBAT-6 (UNMIS), South
+                            Sudan, C/O: 9 E Bengal</h3>
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">February 2011- May
+                            2012</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Planning, organizing and execution of `Comprehensive Peace
+                        Agreement` between Sudan and South Sudan, executing mandated
+                        mission and tasks including maintaining internal peace and `Protection of Civilian` in South
+                        Sudan by monitoring,
+                        negotiation and robust activities, assisting UN pillars in performing their tasks.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#0aa1b2] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">General Staff Officer Grade-I/ Infantry Division
+                        </h3>
+                        <span class="text-xs font-black text-[#0aa1b2] uppercase tracking-widest">May 2009 – February
+                            2011 </span>
+                    </div>
+                    <p class="text-sm text-slate-600">Planning and execution of operational, administrative, logistic,
+                        intelligence and training plan of the division as the
+                        principal staff officer, scheduling all activities of the year, conduct briefs, exercises with
+                        foreign troops, conduct
+                        of visit by dignitaries including Honourable Prime Minister, assisting the civil administration
+                        for disaster management,
+                        budgeting, demanding and allocating training and operational funds and submit returns.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#355872] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Assistant Military Secretary, Military Secretary’s
+                            Branch, Army Headquarters</h3>
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">October 2007 – May
+                            2009</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Formulation and updating UN Mission/Overseas assignment policy,
+                        training and selection of officers for UN Mission.
+                        Formulation of policy and coordinate execution of policies related to officers’ career
+                        management, career planning,
+                        training, transfer and posting of approximately 1300 officers’ up to the rank of Lieutenant
+                        Colonel, Managing IT aspects
+                        of the Branch.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#0aa1b2] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Commanding Officer, Artillery Regiment</h3>
+                        <span class="text-xs font-black text-[#0aa1b2] uppercase tracking-widest">September 2005 –
+                            October 2007 </span>
+                    </div>
+                    <p class="text-sm text-slate-600">Preparation of career profile and yearly training plan of officers
+                        and soldiers (Total 600 personnel), ensuring security
+                        of personnel, material and information, planning and preparation of annual project works which
+                        included major
+                        engineering works and considerable financial expenditure, planning and management of all
+                        administrative, maintenance and
+                        logistic activities including procurement, welfare, legal, office matters, planning and
+                        management of annual financial
+                        matters that included Taka 10 crore per month for the pay and allowances and about Taka
+                        5,000,000.00 for the training,
+                        operation and maintenance of the unit.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#355872] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">General Staff Officer Grade II, Military Operations
+                            Directorate, Army Headquarters</h3>
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">February 2004 -
+                            September 2005</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Preparing policies, operating procedures and ensuring achievement
+                        of Army’s mission and objectives during war and peace,
+                        deployment of Bangladesh Army in the field and keeping it operational. Planning, coordinating
+                        and conducting staff
+                        procedures for disaster management and internal security duties. Coordination of all operational
+                        activities of under
+                        command formations. Issuing instructions & orders for executing all deployments & movements.
+                        Coordinate General staff
+                        matter with Armed Forces Division of The Peoples Republic of Bangladesh. Assist concerned
+                        organizations in ensuring
+                        security of Head of the state, Key Point Installations and Cantonments and Army Headquarters.
+                        Planning and allocation of
+                        funds for deployment of Army for national duties including expenditure of approximately Taka
+                        4000 crore/ $ 250 million.
+                        Disaster management including Spectrum Garments and building at Shakharibazar, Dhaka. Planning,
+                        coordinating, executing
+                        and supervising the first overseas deployment of Bangladesh Armed Forces in Maldives and Sri
+                        Lanka to provide assistance
+                        in the Tsunami ravaged areas, preparation of first countrywide VGF card list. Led media team to
+                        MONUSCO and visited
+                        office of the SRSG to remote camps.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#0aa1b2] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">UN Mission with a Contingent, UNAMSIL / Sierra
+                            Leone</h3>
+                        <span class="text-xs font-black text-[#0aa1b2] uppercase tracking-widest">November 2000 - March
+                            2002 </span>
+                    </div>
+                    <p class="text-sm text-slate-600">Planning and organizing mandated tasks, conduct daily and special
+                        briefing for the visitors and delegations,
+                        negotiations/ mediation with the parties in conflict, assisting UN pillars in implementing
+                        various humanitarian and
+                        rehabilitation programs, monitor, negotiate and discuss with various factions in connection with
+                        observance of
+                        cease-fire by various warring factions, Conduct Disarmament, Demobilization and Reintegration
+                        activities.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#355872] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Grade II Instructor / Bangladesh Military Academy
+                        </h3>
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">July 1996 – April
+                            1999</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Training and grooming up of Gentlemen Cadets for grant of regular
+                        commission in the Bangladesh Armed Forces. Organizing
+                        counselling sessions and ensuring high morale and welfare of Gentlemen Cadets, organizing and
+                        conducting regular
+                        briefings, classes, seminars etc. Training Bangladesh Civil Services Officers and potential
+                        `Makers of the Leaders`.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#0aa1b2] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">General Staff Officer Grade III (Operations) /
+                            Infantry Brigade</h3>
+                        <span class="text-xs font-black text-[#0aa1b2] uppercase tracking-widest">November 1992 –
+                            February 1995 </span>
+                    </div>
+                    <p class="text-sm text-slate-600">Preparing policies, operating procedures, Planning, coordinating
+                        and conducting staff procedures for disaster management
+                        and internal security duties. preparing the training plan and coordination of all operational &
+                        training activities of
+                        under command units.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#355872] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Staff Officer (Administration and Quartering) / 44
+                            Infantry Brigade</h3>
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">March 1992 – November
+                            1992</span>
+                    </div>
+                    <p class="text-sm text-slate-600">Assisting the senior staff in discharging all administrative
+                        responsibilities of the outfit in conflict area in Southern
+                        part of the country.</p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-2xl card-shadow border-l-8 border-[#0aa1b2] transition-transform hover:scale-[1.01]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 gap-2">
+                        <h3 class="text-xl font-bold text-[#355872]">Appointments as a Young Officer, 12 Field Regiment
+                            Artillery
+                        </h3>
+                        <span class="text-xs font-black text-[#0aa1b2] uppercase tracking-widest">May 1988 - February
+                            1992 </span>
+                    </div>
+                    <p class="text-sm text-slate-600">Assisting commanding officer in formulating, planning and conduct
+                        of operation and training of the Regiment, Command,
+                        management and administration of the battery personnel during peace and war. 130 personnel,
+                        Assisting Commanding Officer
+                        in keeping all the vehicles and guns of the regiment operationally and administratively fit at
+                        all times, Responsible
+                        for all administrative maintenance of the regiment. Performing as Commanding Officer’s
+                        administrative staff officer to
+                        run the regiment. Supervision of administrative maintenance of the regiment. Assist the Gun
+                        Position Officer on any
+                        administrative and training matter for smooth functioning of the Battery. Advising commanding
+                        officer in planning,
+                        organizing and conducting Intelligence related affairs of the Regiment.</p>
+                </div>
+
+            </div>
         </div>
     </section>
-    
-    
 
-    <!-- Footer -->
-    <footer class="bg-blue-900 text-white text-center p-4">
-        © 2026 Registrar Portfolio | Developed by Wakil Israk Abir
+    <section id="impact" class="py-32 bg-[#355872] text-white">
+        <div class="container mx-auto px-8">
+            <h2 class="text-3xl font-black mb-16 text-center uppercase tracking-widest">National Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white/10 p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition-all text-center">
+                    <i class="fas fa-house-crack text-4xl text-[#0aa1b2] mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Structural Disasters</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">Led operations for Spectrum Garments and
+                        Shakharibazar building collapses.</p>
+                </div>
+                <div
+                    class="bg-white/10 p-10 rounded-3xl border border-white/10 hover:bg-white/20 transition-all text-center">
+                    <i class="fas fa-plane-arrival text-4xl text-[#0aa1b2] mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Aviation Salvage</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">Coordinated the salvage of a skidded DC-10
+                        Aircraft.</p>
+                </div>
+                <div
+                    class="bg-white/10 p-10 rounded-3xl border border-white/10 hover:bg-white/20 transition-all text-center">
+                    <i class="fas fa-id-card text-4xl text-[#0aa1b2] mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Social Welfare</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">Planned nationwide VGF card list
+                        preparation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-32 bg-white">
+        <div class="container mx-auto px-8">
+            <h2
+                class="text-3xl font-black text-[#355872] mb-16 uppercase tracking-tighter border-l-8 border-[#0aa1b2] pl-6">
+                Education </h2>
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-[#355872] mb-8 flex items-center gap-3">
+                        <i class="fas fa-university text-[#0aa1b2]"></i> Academic Profile
+                    </h3>
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-[#355872] text-lg">EMBA | IBA, DU </h4>
+                            <span class="text-[#0aa1b2] font-black text-xs">2021 </span>
+                        </div>
+                        <div
+                            class="grid grid-cols-2 gap-2 text-[10px] text-slate-500 uppercase tracking-widest font-bold">
+                            <p>• Supply Chain Mgmt </p>
+                            <p>• Corporate Finance </p>
+                            <p>• Human Resource </p>
+                            <p>• Business Strategy </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-[#355872] text-lg">Master of Military Science </h4>
+                            <span class="text-[#0aa1b2] font-black text-xs">2015 </span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">National Defence
+                            University, China </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-[#355872] text-lg">National Security Strategy Course </h4>
+                            <span class="text-[#0aa1b2] font-black text-xs">2015 </span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">National Defence
+                            University, China </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-[#355872] text-lg">Bachelor of Science </h4>
+                            <span class="text-[#0aa1b2] font-black text-xs">2005 </span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">Chittagong
+                            University, Bangladesh </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-[#355872] text-lg">Masters in Defence Studies </h4>
+                            <span class="text-[#0aa1b2] font-black text-xs">1999 </span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">National University,
+                            Bangladesh </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-[#355872] text-lg">Higher Secondary School Certificate </h4>
+                            <span class="text-[#0aa1b2] font-black text-xs">1985 </span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">Ananda Mohon College,
+                            Mymensingh, Bangladesh </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-[#355872] text-lg">Secondary School Certificate </h4>
+                            <span class="text-[#0aa1b2] font-black text-xs">1983 </span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">Mrityunjoy School,
+                            Mymensingh, Bangladesh </p>
+                    </div>
+
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-[#355872] mb-8 flex items-center gap-3">
+                        <i class="fas fa-certificate text-[#0aa1b2]"></i> Additional Qualification
+                    </h3>
+                    <div class="grid grid-cols-2 gap-10">
+                        <div class="bg-[#0aa1b2] p-8 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-white text-lg">PMP Exam Preparation Course </h4>
+                                <span class="text-white font-black text-xs">2021 </span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="bg-[#355872] p-8 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-white text-lg">French Language, Level I </h4>
+                                <span class="text-white font-black text-xs">2017 </span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">Alliance
+                                Francaise, Dhaka
+                            </p>
+                        </div>
+
+                        <div class="bg-[#355872] p-8 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-white text-lg">Chinese language Proficiency Skill, Level I
+                                </h4>
+                                <span class="text-white font-black text-xs">2015 </span>
+                            </div>
+                            <p class="text-[10px] text-slate-200 font-black uppercase tracking-widest">Confucius
+                                Institute Headquarters (Hanban), China
+                            </p>
+                        </div>
+
+                        <div class="bg-[#0aa1b2] p-8 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-white text-lg">Leadership Science and Strategic Administration
+                                    Course</h4>
+                            </div>
+                            <p class="text-[10px] text-slate-200 font-black uppercase tracking-widest">Public
+                                Administration School, Tsinghua University, China
+                            </p>
+                        </div>
+
+                        <div class="bg-[#0aa1b2] p-8 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-white text-lg">Senior Mission Leadership Course </h4>
+                                <span class="text-white font-black text-xs">2012 </span>
+                            </div>
+                            <p class="text-[10px] text-slate-200 font-black uppercase tracking-widest">Tokyo, Japan
+                            </p>
+                        </div>
+
+                        <div class="bg-[#355872] p-8 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-white text-lg">Academic Research and Symposium on
+                                    `Bangladesh-China-India-Myanmar Economic Corridor`</h4>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#355872] p-8 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-white text-lg">Rostered for P4, UNHQ, NY </h4>
+                                <span class="text-white font-black text-xs">2008 </span>
+                            </div>
+                            <p class="text-[10px] text-slate-200 font-black uppercase tracking-widest">USA
+                            </p>
+                        </div>
+
+                        <div class="bg-[#0aa1b2] p-8 rounded-3xl border border-slate-100 shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-white text-lg">Skill in MS Office, Power Point and working
+                                    knowledge in MS Excel.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="container mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-left">
+                <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">Contact</h2>
+                <div class="space-y-2 text-slate-400 text-xs">
+                    <p><i class="fas fa-envelope text-[#0aa1b2] mr-3"></i> anwar333965@gmail.com</p>
+                    <p><i class="fas fa-phone text-[#0aa1b2] mr-3"></i> +8801730002003</p>
+                    <p><i class="fas fa-location-dot text-[#0aa1b2] mr-3"></i> Dhaka Cantt, Dhaka-1206</p>
+                </div>
+            </div>
+            <div class="flex gap-8 text-2xl text-slate-600">
+                <a href="#" class="hover:text-[#0aa1b2] transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-[#0aa1b2] transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-[#0aa1b2] transition-colors"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div
+            class="border-t border-white/5 mt-16 pt-8 text-center text-[10px] text-slate-700 uppercase tracking-[0.5em]">
+            © 2026 Maj Gen Md. Anwarul Islam (Retd).
+        </div>
     </footer>
 
-
     <script src="./script/script.js"></script>
+
 </body>
+
 </html>
