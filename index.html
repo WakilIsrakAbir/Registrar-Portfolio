@@ -28,7 +28,7 @@
 
         /* High-Impact Navy Hero Background */
         .hero-bg {
-            background: linear-gradient(135deg, #1e293b 0%, #355872 100%);
+            background: linear-gradient(135deg, #1e293b 0%, #2cc4d0 100%);
             position: relative;
             overflow: hidden;
         }
@@ -91,8 +91,8 @@
                         Qualification<span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#0aa1b2] transition-all group-hover:w-full"></span></a>
                 </div>
-                <a href="mailto:anwar333965@gmail.com"
-                    class="bg-[#355872] text-white text-[11px] font-bold uppercase tracking-widest px-8 py-3 rounded-sm hover:bg-[#0aa1b2] transition-all shadow-md">
+                <a href="#contact"
+                    class="bg-[#355872] text-white text-[11px] font-bold uppercase tracking-widest px-8 py-3 rounded-xl hover:bg-[#0aa1b2] transition-all shadow-md">
                     Contact
                 </a>
             </div>
@@ -115,8 +115,8 @@
                     class="hover:text-[#0aa1b2] py-2 border-b border-slate-50">Impact</a>
                 <a href="#education" onclick="toggleMenu()"
                     class="hover:text-[#0aa1b2] py-2 border-b border-slate-50">Education & Qualification</a>
-                <a href="mailto:anwar333965@gmail.com" class="bg-[#0aa1b2] text-white text-center py-4 rounded-sm mt-4">
-                    Send Email
+                <a href="#contact" onclick="toggleMenu()" class="bg-[#0aa1b2] text-white text-center py-4 rounded-sm mt-4">
+                    Contact
                 </a>
             </div>
         </div>
@@ -142,16 +142,16 @@
                     </p>
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-4">
                         <div class="glass-container p-6 rounded-2xl">
-                            <p class="text-3xl font-black text-[#0aa1b2]">2,000+</p>
-                            <p class="text-[9px] font-bold uppercase text-slate-400">Officers Selected</p>
+                            <p class="text-3xl font-black text-[#29ddf1]">2,000+</p>
+                            <p class="text-[9px] font-bold uppercase text-slate-200">Officers Selected</p>
                         </div>
                         <div class="glass-container p-6 rounded-2xl">
-                            <p class="text-3xl font-black text-[#0aa1b2]">$470M</p>
-                            <p class="text-[9px] font-bold uppercase text-slate-400">Project Management</p>
+                            <p class="text-3xl font-black text-[#29ddf1]">$470M</p>
+                            <p class="text-[9px] font-bold uppercase text-slate-200">Project Management</p>
                         </div>
                         <div class="glass-container p-6 rounded-2xl hidden sm:block">
-                            <p class="text-3xl font-black text-[#0aa1b2]">21k</p>
-                            <p class="text-[9px] font-bold uppercase text-slate-400">Members Trained</p>
+                            <p class="text-3xl font-black text-[#29ddf1]">21k</p>
+                            <p class="text-[9px] font-bold uppercase text-slate-200">Members Trained</p>
                         </div>
                     </div>
                 </div>
@@ -589,30 +589,84 @@
         </div>
     </section>
 
-    <section id="impact" class="py-32 bg-[#355872] text-white">
-        <div class="container mx-auto px-8">
-            <h2 class="text-3xl font-black mb-16 text-center uppercase tracking-widest">National Impact</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div
-                    class="bg-white/10 p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition-all text-center">
-                    <i class="fas fa-house-crack text-4xl text-[#0aa1b2] mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4">Structural Disasters</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed">Led operations for Spectrum Garments and
-                        Shakharibazar building collapses.</p>
+    <section id="impact" class="py-32 bg-[#355872] text-white overflow-hidden relative">
+        <div class="container mx-auto px-8 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black uppercase tracking-[0.2em]">National & Global Impact</h2>
+                <div class="w-24 h-1 bg-[#0aa1b2] mx-auto mt-6"></div>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white/5 p-10 rounded-2xl border border-white/10 hover:bg-white/10 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-[#0aa1b2]/20 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-house-crack text-3xl text-[#0aa1b2]"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Crisis Management</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Led complex recovery operations for high-profile structural disasters, including the Spectrum
+                        Garments collapse and the Shakharibazar building incidents.
+                    </p>
                 </div>
-                <div
-                    class="bg-white/10 p-10 rounded-3xl border border-white/10 hover:bg-white/20 transition-all text-center">
-                    <i class="fas fa-plane-arrival text-4xl text-[#0aa1b2] mb-6"></i>
+    
+                <div class="bg-white/5 p-10 rounded-2xl border border-white/10 hover:bg-white/10 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-[#0aa1b2]/20 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-plane-arrival text-3xl text-[#0aa1b2]"></i>
+                    </div>
                     <h4 class="text-xl font-bold mb-4">Aviation Salvage</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed">Coordinated the salvage of a skidded DC-10
-                        Aircraft.</p>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Strategically coordinated the technical recovery of a skidded DC-10 Aircraft at Chittagong
+                        Airport, ensuring the restoration of vital aviation infrastructure.
+                    </p>
                 </div>
-                <div
-                    class="bg-white/10 p-10 rounded-3xl border border-white/10 hover:bg-white/20 transition-all text-center">
-                    <i class="fas fa-id-card text-4xl text-[#0aa1b2] mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4">Social Welfare</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed">Planned nationwide VGF card list
-                        preparation.</p>
+    
+                <div class="bg-white/5 p-10 rounded-2xl border border-white/10 hover:bg-white/10 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-[#0aa1b2]/20 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-id-card text-3xl text-[#0aa1b2]"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Social Welfare Strategy</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Planned and executed the first countrywide VGF card list preparation, necessitating the
+                        mobilization of Army resources to every village in Bangladesh.
+                    </p>
+                </div>
+    
+                <div class="bg-white/5 p-10 rounded-2xl border border-white/10 hover:bg-white/10 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-[#0aa1b2]/20 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe-asia text-3xl text-[#0aa1b2]"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Global Peacekeeping</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Successfully led senior officers from 50 different countries for 6 months and managed Tsunami
+                        relief operations in Maldives and Sri Lanka.
+                    </p>
+                </div>
+    
+                <div class="bg-white/5 p-10 rounded-2xl border border-white/10 hover:bg-white/10 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-[#0aa1b2]/20 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-shield-halved text-3xl text-[#0aa1b2]"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Strategic Installation</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Ensured the security of Key Point Installations (KPIs), Cantonments, and Army Headquarters,
+                        including protection for VVIPs and Heads of State.
+                    </p>
+                </div>
+    
+                <div class="bg-white/5 p-10 rounded-2xl border border-white/10 hover:bg-white/10 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-[#0aa1b2]/20 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-microphone-lines text-3xl text-[#0aa1b2]"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Institutional Impact</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Served as Chairman of leading educational institutions, including specialized schools for children,
+                        and participated in multiple national media talk shows.
+                    </p>
                 </div>
             </div>
         </div>
@@ -622,13 +676,13 @@
         <div class="container mx-auto px-8">
             <h2
                 class="text-3xl font-black text-[#355872] mb-16 uppercase tracking-tighter border-l-8 border-[#0aa1b2] pl-6">
-                Education </h2>
+                Education <span> </span> & <span> </span> Qualification</h2>
             <div class="grid lg:grid-cols-2 gap-16">
                 <div class="space-y-6">
                     <h3 class="text-xl font-bold text-[#355872] mb-8 flex items-center gap-3">
                         <i class="fas fa-university text-[#0aa1b2]"></i> Academic Profile
                     </h3>
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:scale-[1.01]">
                         <div class="flex justify-between items-start mb-4">
                             <h4 class="font-bold text-[#355872] text-lg">EMBA | IBA, DU </h4>
                             <span class="text-[#0aa1b2] font-black text-xs">2021 </span>
@@ -642,7 +696,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:scale-[1.01]">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="font-bold text-[#355872] text-lg">Master of Military Science </h4>
                             <span class="text-[#0aa1b2] font-black text-xs">2015 </span>
@@ -651,7 +705,7 @@
                             University, China </p>
                     </div>
 
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:scale-[1.01]">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="font-bold text-[#355872] text-lg">National Security Strategy Course </h4>
                             <span class="text-[#0aa1b2] font-black text-xs">2015 </span>
@@ -660,7 +714,7 @@
                             University, China </p>
                     </div>
 
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:scale-[1.01]">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="font-bold text-[#355872] text-lg">Bachelor of Science </h4>
                             <span class="text-[#0aa1b2] font-black text-xs">2005 </span>
@@ -669,7 +723,7 @@
                             University, Bangladesh </p>
                     </div>
 
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:scale-[1.01]">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="font-bold text-[#355872] text-lg">Masters in Defence Studies </h4>
                             <span class="text-[#0aa1b2] font-black text-xs">1999 </span>
@@ -678,7 +732,7 @@
                             Bangladesh </p>
                     </div>
 
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:scale-[1.01]">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="font-bold text-[#355872] text-lg">Higher Secondary School Certificate </h4>
                             <span class="text-[#0aa1b2] font-black text-xs">1985 </span>
@@ -687,7 +741,7 @@
                             Mymensingh, Bangladesh </p>
                     </div>
 
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:scale-[1.01]">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="font-bold text-[#355872] text-lg">Secondary School Certificate </h4>
                             <span class="text-[#0aa1b2] font-black text-xs">1983 </span>
@@ -698,7 +752,7 @@
 
                 </div>
 
-                <div class="space-y-6">
+                 <!-- <div class="space-y-6"> 
                     <h3 class="text-xl font-bold text-[#355872] mb-8 flex items-center gap-3">
                         <i class="fas fa-certificate text-[#0aa1b2]"></i> Additional Qualification
                     </h3>
@@ -774,34 +828,276 @@
                             </div>
                         </div>
                     </div>
+                </div> -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-[#355872] mb-8 flex items-center gap-3">
+                        <i class="fas fa-certificate text-[#0aa1b2]"></i> Additional Qualification
+                    </h3>
+                
+                    <div class="space-y-6">
+                        <div
+                            class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm transition-transform hover:scale-[1.01]">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-[#355872] text-lg leading-tight">Completed instructor led 40 hours 'PMP
+                                    Exam Preparation Course'</h4>
+                                <span class="text-[#0aa1b2] font-black text-xs ml-4">2021</span>
+                            </div>
+                        </div>
+                
+                        <div
+                            class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm transition-transform hover:scale-[1.01]">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-[#355872] text-lg leading-tight">French Language, Level I</h4>
+                                <span class="text-[#0aa1b2] font-black text-xs ml-4">2017</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">Alliance Francaise, Dhaka</p>
+                        </div>
+                
+                        <div
+                            class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm transition-transform hover:scale-[1.01]">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-[#355872] text-lg leading-tight">Chinese language Proficiency Skill, Level I
+                                </h4>
+                                <span class="text-[#0aa1b2] font-black text-xs ml-4">2015</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">Confucius Institute Headquarters
+                                (Hanban), China</p>
+                        </div>
+                
+                        <div
+                            class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm transition-transform hover:scale-[1.01]">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-[#355872] text-lg leading-tight">Leadership Science and Strategic
+                                    Administration Course</h4>
+                            </div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">Public Administration School,
+                                Tsinghua University, China</p>
+                        </div>
+                
+                        <div
+                            class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm transition-transform hover:scale-[1.01]">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-[#355872] text-lg leading-tight">Senior Mission Leadership Course</h4>
+                                <span class="text-[#0aa1b2] font-black text-xs ml-4">2012</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">Tokyo, Japan</p>
+                        </div>
+                
+                        <div
+                            class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm transition-transform hover:scale-[1.01]">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-[#355872] text-lg leading-tight">Academic Research and Symposium on
+                                    'Bangladesh-China-India-Myanmar Economic Corridor'</h4>
+                            </div>
+                        </div>
+                
+                        <div
+                            class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm transition-transform hover:scale-[1.01]">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-bold text-[#355872] text-lg leading-tight">Rostered for P4, UNHQ, NY</h4>
+                                <span class="text-[#0aa1b2] font-black text-xs ml-4">2008</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest">USA</p>
+                        </div>
+                
+                        <div
+                            class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm transition-transform hover:scale-[1.01]">
+                            <h4 class="font-bold text-[#355872] text-lg leading-tight">Skill in MS Office, Power Point and working
+                                knowledge in MS Excel.</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-16">
-        <div class="container mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-10">
-            <div class="text-center md:text-left">
-                <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">Contact</h2>
-                <div class="space-y-2 text-slate-400 text-xs">
-                    <p><i class="fas fa-envelope text-[#0aa1b2] mr-3"></i> anwar333965@gmail.com</p>
-                    <p><i class="fas fa-phone text-[#0aa1b2] mr-3"></i> +8801730002003</p>
-                    <p><i class="fas fa-location-dot text-[#0aa1b2] mr-3"></i> Dhaka Cantt, Dhaka-1206</p>
+
+    <footer id="contact" class="bg-slate-900 text-white py-20">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    
+                <div class="space-y-10">
+                    <div>
+                        <h2 class="text-3xl font-black uppercase tracking-tighter mb-6">Get In <span
+                                class="text-[#0aa1b2]">Touch</span></h2>
+                    </div>
+    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-[#0aa1b2] transition-colors">
+                                <i class="fas fa-envelope text-[#0aa1b2]"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-slate-500">Official Email
+                                </p>
+                                <p class="text-sm font-bold">anwar333965@gmail.com</p>
+                            </div>
+                        </div>
+    
+                        <div class="flex items-center gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-[#0aa1b2] transition-colors">
+                                <i class="fas fa-phone text-[#0aa1b2]"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-slate-500">Contact Number
+                                </p>
+                                <p class="text-sm font-bold">+8801730002003</p>
+                            </div>
+                        </div>
+    
+                        <div class="flex items-center gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-[#0aa1b2] transition-colors">
+                                <i class="fas fa-location-dot text-[#0aa1b2]"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-slate-500">Location</p>
+                                <p class="text-sm font-bold">Dhaka Cantt, Dhaka-1206, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="flex gap-6 text-xl">
+                        <a href="#"
+                            class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#0aa1b2] hover:text-white transition-all"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#0aa1b2] hover:text-white transition-all"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#0aa1b2] hover:text-white transition-all"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+    
+                <!-- <div class="bg-white/5 p-8 md:p-10 rounded-3xl border border-white/10 shadow-2xl">
+                    <form action="#" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Full
+                                    Name</label>
+                                <input type="text" placeholder="Maj Gen Md. Anwarul Islam"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0aa1b2] transition-colors placeholder:text-slate-600">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Email
+                                    Address</label>
+                                <input type="email" placeholder="example@email.com"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0aa1b2] transition-colors placeholder:text-slate-600">
+                            </div>
+                        </div>
+    
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Subject</label>
+                            <input type="text" placeholder="Collaboration Inquiry"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0aa1b2] transition-colors placeholder:text-slate-600">
+                        </div>
+    
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Message</label>
+                            <textarea rows="4" placeholder="How can I assist you?"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0aa1b2] transition-colors placeholder:text-slate-600 resize-none"></textarea>
+                        </div>
+    
+                        <button type="submit"
+                            class="w-full bg-[#355872] hover:bg-[#0aa1b2] text-white font-black text-xs uppercase tracking-[0.3em] py-4 rounded-xl shadow-lg transition-all active:scale-[0.98]">
+                            Send Message
+                        </button>
+                    </form>
+                </div> -->
+                
+                <div class="bg-white/5 p-8 md:p-10 rounded-3xl border border-white/10 shadow-2xl">
+                    <form id="contact-form" action="#" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Full Name</label>
+                                <input type="text" name="from_name" placeholder="Your Full Name" required
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0aa1b2] transition-colors placeholder:text-slate-600">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Email Address</label>
+                                <input type="email" name="from_email" placeholder="example@email.com" required
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0aa1b2] transition-colors placeholder:text-slate-600">
+                            </div>
+                        </div>
+                
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Subject</label>
+                            <input type="text" name="subject" placeholder="Collaboration Inquiry"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0aa1b2] transition-colors placeholder:text-slate-600">
+                        </div>
+                
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Message</label>
+                            <textarea name="message" rows="4" placeholder="How can I assist you?" required
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#0aa1b2] transition-colors placeholder:text-slate-600 resize-none"></textarea>
+                        </div>
+                
+                        <button type="submit"
+                            class="w-full bg-[#355872] hover:bg-[#0aa1b2] text-white font-black text-xs uppercase tracking-[0.3em] py-4 rounded-xl shadow-lg transition-all active:scale-[0.98]">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="flex gap-8 text-2xl text-slate-600">
-                <a href="#" class="hover:text-[#0aa1b2] transition-colors"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="hover:text-[#0aa1b2] transition-colors"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-[#0aa1b2] transition-colors"><i class="fab fa-facebook-f"></i></a>
+    
+            <div class="border-t border-white/5 mt-20 pt-10 text-center">
+                <p class="text-[10px] text-slate-600 uppercase tracking-[0.5em]">
+                    © 2026 Maj Gen Md. Anwarul Islam (Retd). All Rights Reserved.
+                </p>
             </div>
-        </div>
-        <div
-            class="border-t border-white/5 mt-16 pt-8 text-center text-[10px] text-slate-700 uppercase tracking-[0.5em]">
-            © 2026 Maj Gen Md. Anwarul Islam (Retd).
         </div>
     </footer>
 
+    <!-- for toggle -->
     <script src="./script/script.js"></script>
+
+    <!-- mail part -->
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+        // EMAILJS INITIALIZATION
+        (function () {
+            // Apnar provide kora User ID
+            emailjs.init("9R2H4sK7nLCfnZgE1");
+        })();
+
+        // CONTACT FORM LOGIC
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contact-form');
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Button state change (Loading effect)
+                    const originalBtnText = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+
+                    // EmailJS Send Form
+                    emailjs.sendForm(
+                        'service_28071dn',   // Service ID
+                        'template_astpctp',  // Template ID
+                        this
+                    ).then(() => {
+                        alert('Message sent successfully! Check your email.');
+                        contactForm.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    }, (error) => {
+                        alert('Failed to send message. Please try again.');
+                        console.error('EmailJS Error:', error);
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    });
+                });
+            }
+        });
+    </script>
 
 </body>
 
